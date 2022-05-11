@@ -1,0 +1,577 @@
+/** ~~~~~~~~~~~~~~~~~~~
+** Table of Contents 
+
+** 1. Styles
+
+** 2. Layout
+** 2.1 Navigation
+
+** 3. Components
+**~~~~~~~~~~~~~~~~~~~~~~ */
+
+/**   ==========
+   ** 1. Styles
+   ** ========== **/
+
+:focus { 
+  outline: none; }
+
+body {
+  font-family: Actor;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 10px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  display: block;
+  font-size: 1.25em;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h4 {
+  display: block;
+  font-size: 1.15em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.div1 {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+
+.div2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+
+.div3 {
+  margin-top: 15px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+
+.p1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.p2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.p3 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.pFcst {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+/**  ==========
+  ** 2. Layout
+  ** ========== */
+
+.PageBorder { /*? Border Around Page */
+  border: 2px solid #383838;
+  border-radius: 5px;
+  width: 45%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  width: 480px;
+  height: 860px;
+}
+
+.grid1 {grid-area: myArea1;}
+.grid2 {grid-area: myArea2;}
+.grid3 {grid-area: myArea3;}
+.grid4 {grid-area: myArea4;}
+.grid5 {grid-area: myArea5;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "myArea1 myArea1"
+    "myArea3 myArea4"
+    "myArea5 myArea5";
+  grid-column-gap: 5px;
+  grid-row-gap: 1px;
+  padding: 1px;
+}
+
+.tableSection {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.tableFcst { /*? Forecast Tables */
+  width: 450px;
+  border: 2px solid #383838;
+  border-collapse: collapse;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.tableSnkFnd { /*? Sinking Funds Table */
+  width: 465px;
+  border: 2px solid #383838;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.thFcst { /*? Forecast Table Header */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  width: 100px;
+}
+
+.thFcstAmt { /*? Forecast Table Amount Header */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  width: 50px;
+}
+
+.thFund { /*? Sinking Funds Table - Fund Header */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  width: 100px;
+}
+
+.thLimit { /*? Sinking Funds Table - Limit Header */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  width: 10px;
+}
+
+.thLogic { /*? Sinking Funds Table - Logic Header */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  width: 70px;
+}
+
+.td1 { /*? Table Column Border */
+  border: 1px solid #383838;
+  border-collapse: collapse;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+
+caption { /*? Table Captions */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.section1 { /*? Filters Top Area */
+  border: 2px solid #383838;
+  border-radius: 5px;
+  width: 45%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.section2 { /*? Filters Bottom Area */
+  border: 2px solid #383838;
+  border-radius: 5px;
+  width: 45%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.ulFltGrp { /*? Filters Breakdown */
+  list-style-type: none;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ulOthLnk { /*? Other Links List */
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  padding: 0;
+  overflow: hidden;
+  width: auto;
+}
+
+.liFltBrk { /*? Filters Breakdown List */
+  display: block;
+  color: black;
+  text-align: left;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 1px 1px;
+  text-decoration: none;
+}
+
+/**  ===============
+  ** 2.1 Navigation
+  ** =============== */
+
+.activePage { /*? Active Page */
+    background-color: #1aa3ff;
+}
+
+.ulNav { /*? Primary Nav */
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 480px;
+}
+
+.ulQuick { /*? Quick Links Nav */
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: auto;
+  height: 25px;
+}
+
+.ulFcst { /*? Forecast Nav */
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: auto;
+  height: 25px;
+}
+
+.liNav a { /*? Nav List Element */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 9px;
+  text-decoration: none;
+}
+
+.liNav a:hover:not(.activePage),
+.liNav a:focus:not(.activePage) { /*? Nav List Element */
+  background-color: rgb(80, 80, 80);
+}
+
+.liNav { /*? Nav List Element */
+  float: left;
+}
+
+.liAbout a { /*? Nav About Element */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.liAbout a:hover:not(.activePage),
+.liAbout a:focus:not(.activePage) { /*? Nav About Element */
+  background-color: rgb(80, 80, 80);
+}
+
+.liAbout { /*? Nav About Element */
+  float: right;
+}
+
+.liHome a { /*? Nav Main Home Element */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 6px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.liHome a:hover:not(.activePage),
+.liHome a:focus:not(.activePage) { /*? Nav Main Home Element */
+  background-color: rgb(80, 80, 80);
+}
+
+.liHome { /*? Nav Main Home Element */
+  float: left;
+}
+
+.liHomeQckHome a { /*? Nav Quick Tips Home Element */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.liHomeQckHome a:hover:not(.activePage),
+.liHomeQckHome a:focus:not(.activePage) { /*? Nav Quick Tips Home Element */
+  background-color: rgb(80, 80, 80);
+}
+
+.liHomeQckHome { /*? Nav Quick Tips Home Element */
+  float: left;
+}
+
+.liOther a { /*? Nav Quick Tips Other Links Element */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.liOther a:hover:not(.activePage),
+.liOther a:focus:not(.activePage) { /*? Nav Quick Tips Other Links Element */
+  background-color: rgb(80, 80, 80);
+}
+
+.liOther { /*? Nav Quick Tips Other Links Element */
+  float: right;
+}
+
+.liQckLnk a { /*? Nav Quick Links Element */ 
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.liQckLnk a:hover:not(.activePage),
+.liQckLnk a:focus:not(.activePage) { /*? Nav Quick Links Element */ 
+  background-color: rgb(80, 80, 80);
+}
+
+.liQckLnk { /*? Nav Quick Links Element */ 
+  float: left;
+}
+
+.liFcst a { /*? Nav Quick Links Element */ 
+  display: block;
+  color: white;
+  text-align: center;
+  padding-top: 1px;
+  padding-right: 19px;
+  padding-bottom: 5px;
+  padding-left: 18px;
+  text-decoration: none;
+}
+
+.liFcst a:hover:not(.activePage),
+.liFcst a:focus:not(.activePage) { /*? Nav Quick Links Element */ 
+  background-color: rgb(80, 80, 80);
+}
+
+.liFcst { /*? Nav Quick Links Element */ 
+  float: left;
+}
+
+.liLink { /*? Nav Other Links Element */ 
+  display: block;
+  text-align: left;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+/** ==============
+**  3. Components
+**  ============== */
+
+.icon { /*? Filters Icons */
+  width: 15%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 1px;
+  margin-left: 0px;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+}
+
+.label { /*? Filters Labels */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+}
+
+.demonstrationbutton { /*? Filters Demo Button */
+  margin-right: 4px;
+}
+
+.tooltip { /*? Copy To Clipboard Tooltip */
+  position: relative;
+  left: 1px;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.tooltip .tooltiptext { /*? Copy To Clipboard Tooltip */
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 6px;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  padding-left: 0px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after { /*? Copy To Clipboard Tooltip */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext { /*? Copy To Clipboard Tooltip */
+  visibility: visible;
+  opacity: 1;
+}
