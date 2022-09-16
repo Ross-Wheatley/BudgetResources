@@ -1,428 +1,271 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YNAB & Budget - Filters</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-  <script src="https://kit.fontawesome.com/ae2d79533d.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="D:\Rossage\Google Drive\Website Stuff\YNAB Cheatsheet\BudgetAssistant.ico"/>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul class="ulNav">
-        <li class="liHome"><a href="index.html" title="Go to Main Home Page"><i class="fas fa-home"></i></a></li>
-        <li class="liNav"><a href="filters.html" class="activePage">Filters</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="PageBorder">
-    <section class="p1">
-      <h1>Categories Filters</h1>
-      <p class="p3">Copying these allows better filtering in categories.</p>
-      Use <div class="tooltip">
-            <button class= "demonstrationbutton">
-              <span class="tooltiptext" id="SplurgeTooltip">Copy to Clipboard</span>
-          <i class="far fa-copy"></i>
-            </button>
-          </div>to copy icons.
-  </section>
-    <section  class="grid-container">
-      <section class="grid3"><!-- Accounts -->
-        <section>
-          <h3>Accounts</h3>
-          <p class="p1">These represent bank accounts.</p>
-        </section>
-        <section class="section1">
-            <div class="div1"><!-- Personal -->
-              <input class= "icon" type="text" value="🌊" id="PersonalInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="PersonalFunction()" onmouseout="PersonaloutFunc()">
-                  <span class="tooltiptext" id="PersonalTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="PersonalInput">Personal</label>
+	<head>
+		<title>YNAB Filters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/filters.css">
+		<link rel="icon" href="images/chart.ico">
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
 
-                <script>
-                function PersonalFunction() {
-                  var copyText = document.getElementById("PersonalInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
+			<!-- Header -->
+				<div id="header">
 
-                  var tooltip = document.getElementById("PersonalTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
+					<!-- Logo -->
+						<h1><a href="index.html" id="logo">YNAB Category Filters & Taxonomy</a></h1>
 
-                function PersonaloutFunc() {
-                  var tooltip = document.getElementById("PersonalTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Joint Bills -->
-              <input class= "icon" type="text" value="🏡" id="JointBillsInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="JointBillsFunction()" onmouseout="JointBillsoutFunc()">
-                  <span class="tooltiptext" id="JointBillsTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="JointBillsInput">Joint Bills</label>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">YNAB Resources</a>
+									<ul>
+										<li><a href="filtersold.html">Filters</a></li>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Magna phasellus</a></li>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Etiam sed tempus</a></li>
+										<li>
+											<a href="#">Submenu</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Phasellus magna</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">CS Net Worth Resources</a>
+									<ul>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Lorem dolor</a></li>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Magna phasellus</a></li>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Etiam sed tempus</a></li>
+										<li>
+											<a href="#">Submenu</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Phasellus magna</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Other Budget Resources</a>
+									<ul>
+										<li><a href="https://investcalc.github.io/" target="_blank" rel="noopener noreferrer">Investment Frequency Calculator</a></li>
+										<li><a href="https://docs.google.com/spreadsheets/d/145iM6uuFS9m-Rul65--eFJQq_Au7Z_BA4_CwkYwu2DI/edit#gid=271791020" target="_blank" rel="noopener noreferrer">AU Savings Account Leaderboard</a></li>
+										<li><a href="#" target="_blank" rel="noopener noreferrer">Etiam sed tempus</a></li>
+										<li>
+											<a href="#">Submenu</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Phasellus magna</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Financial Accounts</a>
+									<ul>
+										<li><a href="https://ib.nab.com.au/nabib/acctInfo_acctBal.ctl#/" target="_blank" rel="noopener noreferrer">NAB Online Banking</a></li>
+										<li><a href="https://mb.greater.com.au/MobileBanking/Login" target="_blank" rel="noopener noreferrer">Greater Online Banking</a></li>
+										<li><a href="https://online.gemvisa.com.au/access/login" target="_blank" rel="noopener noreferrer">Latitude GEM VISA</a></li>
+										<li><a href="https://toyotafinanceonline.com.au/Login/TFLogin.aspx" target="_blank" rel="noopener noreferrer">Toyota Finance</a></li>
+										<li><a href="https://portal.australiansuper.com/login.aspx" target="_blank" rel="noopener noreferrer">Australian Super</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
 
-                <script>
-                function JointBillsFunction() {
-                  var copyText = document.getElementById("JointBillsInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
+				</div>
 
-                  var tooltip = document.getElementById("JointBillsTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
+			<!-- Highlights -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-receipt"></i>
+									<h3>Household YNAB Budget</h3>
+									<p>This is the household focused budget within YNAB. This is where expense tracking occurs as well as primary reporting.</p>
+									<a href="https://app.youneedabudget.com/5303480c-04dd-4c9a-a97a-b794a01c77ea/budget" class="button"target="_blank" rel="noopener noreferrer">Go to YNAB</a>
+                                    <input class= "icon" type="text" value="💾" id="SubscriptionsInput" style="text-align:center;" readonly>
+                                    <div class="tooltip">
+                                        <button onclick="SubscriptionsFunction()" onmouseout="SubscriptionsoutFunc()">
+                                          <span class="tooltiptext" id="SubscriptionsTooltip">Copy to Clipboard</span>
+                                      <i class="far fa-copy"></i>
+                                        </button>
+                                      </div>
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-calculator"></i>
+									<h3>Household Budget</h3>
+									<p>This Google Sheet is made by me, it forms the backbone for all budgeting. This is the source information for the other sheets.</p>
+									<a href="https://docs.google.com/spreadsheets/d/1C5yTGVvdCSn9Hnpcb_9gk71Tm4waRV38QooXkXLGlp8/edit?usp=sharing" class="button"target="_blank" rel="noopener noreferrer">Go to Sheet</a>
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower">
+								<div class="box highlight">
+									<i class="icon solid major fa-chart-pie"></i>
+									<h3>Net Worth Tracking</h3>
+									<p>This is a Google Sheet developed by CompiledSanity. Used to track Net Worth areas in greater detail.</p>
+									<a href="https://docs.google.com/spreadsheets/d/1zWmPhwMdC503QbrzBPPDHSi7-0YsXpwDAMVoIMjcQHA/edit#gid=1133598012" class="button"target="_blank" rel="noopener noreferrer">Go to Sheet</a>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
 
-                function JointBillsoutFunc() {
-                  var tooltip = document.getElementById("JointBillsTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Joint Spending -->
-              <input class= "icon" type="text" value="🛒" id="JointSpendingInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="JointSpendingFunction()" onmouseout="JointSpendingoutFunc()">
-                  <span class="tooltiptext" id="JointSpendingTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="JointSpendingInput">Joint Spending</label>
+			<!-- Gigantic Heading -->
+				<section class="wrapper style2">
+					<div class="container">
+						<header class="major">
+							<h2>A gigantic heading you can use for whatever</h2>
+							<p>With a much smaller subtitle hanging out just below it</p>
+						</header>
+					</div>
+				</section>
 
-                <script>
-                function JointSpendingFunction() {
-                  var copyText = document.getElementById("JointSpendingInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
+			<!-- Posts -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>The First Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+										<a href="#" class="button">Learn More</a>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>The Second Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>The Third Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>The Fourth Thing</h3>
+										<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
 
-                  var tooltip = document.getElementById("JointSpendingTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
+			<!-- CTA -->
+				<section id="cta" class="wrapper style3">
+					<div class="container">
+						<header>
+							<h2>Are you ready to continue your quest?</h2>
+							<a href="#" class="button">Insert Coin</a>
+							<button onclick="SubscriptionsFunction()" onmouseout="SubscriptionsoutFunc()">
+							<i class="far fa-copy"></i>
+							  </button>
+						</header>
+					</div>
+				</section>
 
-                function JointSpendingsoutFunc() {
-                  var tooltip = document.getElementById("JointSpendingTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Subscriptions -->
-              <input class= "icon" type="text" value="⏰" id="SubscriptionsInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="SubscriptionsFunction()" onmouseout="SubscriptionsoutFunc()">
-                  <span class="tooltiptext" id="SubscriptionsTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="SubscriptionsInput">Subscriptions</label>
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<section class="col-3 col-6-narrower col-12-mobilep">
+								<h3>Links to Stuff</h3>
+								<ul class="links">
+									<li><a href="#">Mattis et quis rutrum</a></li>
+									<li><a href="#">Suspendisse amet varius</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum accumsan dolor</a></li>
+									<li><a href="#">Mattis rutrum accumsan</a></li>
+									<li><a href="#">Suspendisse varius nibh</a></li>
+									<li><a href="#">Sed et dapibus mattis</a></li>
+								</ul>
+							</section>
+							<section class="col-3 col-6-narrower col-12-mobilep">
+								<h3>More Links to Stuff</h3>
+								<ul class="links">
+									<li><a href="#">Duis neque nisi dapibus</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum accumsan sed</a></li>
+									<li><a href="#">Mattis et sed accumsan</a></li>
+									<li><a href="#">Duis neque nisi sed</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum amet varius</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
 
-                <script>
-                function SubscriptionsFunction() {
-                  var copyText = document.getElementById("SubscriptionsInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+						</ul>
 
-                  var tooltip = document.getElementById("SubscriptionsTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net/arcana">Arcana by HTML5 UP</a></li>
+							</ul>
+						</div>
 
-                function SubscriptionsoutFunc() {
-                  var tooltip = document.getElementById("SubscriptionsTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Joint Savings -->
-              <input class= "icon" type="text" value="👪" id="JointSavingsInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="JointSavingsFunction()" onmouseout="JointSavingsoutFunc()">
-                  <span class="tooltiptext" id="JointSavingsTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="JointSavingsInput">Joint Savings</label>
+				</div>
 
-                <script>
-                function JointSavingsFunction() {
-                  var copyText = document.getElementById("JointSavingsInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
+		</div>
 
-                  var tooltip = document.getElementById("JointSavingsTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/clipboard.js"></script>
 
-                function JointSavingsoutFunc() {
-                  var tooltip = document.getElementById("JointSavingsTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Savings -->
-              <input class= "icon" type="text" value="💰" id="SavingsInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="SavingsFunction()" onmouseout="SavingsoutFunc()">
-                  <span class="tooltiptext" id="SavingsTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="SavingsInput">Savings</label>
-
-                <script>
-                function SavingsFunction() {
-                  var copyText = document.getElementById("SavingsInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("SavingsTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function SavingsoutFunc() {
-                  var tooltip = document.getElementById("SavingsTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div3"><!-- Lifesaver -->
-              <input class= "icon" type="text" value="🌌" id="LifesaverInput" style="text-align:center;" readonly>
-                <div class="tooltip">
-                  <button class="myButton" onclick="LifesaverFunction()" onmouseout="LifesaveroutFunc()">
-                    <span class="tooltiptext" id="LifesaverTooltip">Copy to Clipboard</span>
-                    <i class="far fa-copy"></i>
-                  </button>
-                </div>
-                <label class= "label" for="LifesaverInput">Lifesaver</label>
-
-                <script>
-                function LifesaverFunction() {
-                  var copyText = document.getElementById("LifesaverInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("LifesaverTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function LifesaveroutFunc() {
-                  var tooltip = document.getElementById("LifesaverTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-      </section>
-      <section class="grid5"><!-- Frequencies & Indicators -->
-        <section>
-          <h3>Frequencies & Indicators</h3>
-          <p class="p1">These represent payment frequencies & indicators for categories.</p>
-        </section>
-        <section class="section2">
-            <div class="div1"><!-- Fortnightly -->
-              <input class= "icon" type="text" value="➰" id="WeeklyFortnightlyInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="WeeklyFortnightlyFunction()" onmouseout="WeeklyFortnightlyoutFunc()">
-                  <span class="tooltiptext" id="WeeklyFortnightlyTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-                <label class= "label" for="WeeklyFortnightlyInput">Fortnightly</label>
-
-                <script>
-                function WeeklyFortnightlyFunction() {
-                  var copyText = document.getElementById("WeeklyFortnightlyInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("WeeklyFortnightlyTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function WeeklyFortnightlyoutFunc() {
-                  var tooltip = document.getElementById("WeeklyFortnightlyTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Monthly -->
-              <input class= "icon" type="text" value="🔱" id="MonthlyInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button class="button" onclick="MonthlyFunction()" onmouseout="MonthlyoutFunc()">
-                  <span class="tooltiptext" id="MonthlyTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="MonthlyInput">Monthly</label>
-
-                <script>
-                function MonthlyFunction() {
-                  var copyText = document.getElementById("MonthlyInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("MonthlyTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function MonthlyoutFunc() {
-                  var tooltip = document.getElementById("MonthlyTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div3"><!-- Sinking Funds -->
-              <input class= "icon" type="text" value="⚓" id="SinkingFundsInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="SinkingFundsFunction()" onmouseout="SinkingFundsoutFunc()">
-                  <span class="tooltiptext" id="SinkingFundsTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="SinkingFundsInput">Sinking Funds</label>
-
-                <script>
-                function SinkingFundsFunction() {
-                  var copyText = document.getElementById("SinkingFundsInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("SinkingFundsTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function SinkingFundsoutFunc() {
-                  var tooltip = document.getElementById("SinkingFundsTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Must be Funded -->
-              <input class= "icon" type="text" value="💥" id="MustbeFundedInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="MustbeFundedFunction()" onmouseout="MustbeFundedoutFunc()">
-                  <span class="tooltiptext" id="MustbeFundedTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="MustbeFundedInput">Must be Funded</label>
-
-                <script>
-                function MustbeFundedFunction() {
-                  var copyText = document.getElementById("MustbeFundedInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("MustbeFundedTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function MustbeFundedoutFunc() {
-                  var tooltip = document.getElementById("MustbeFundedTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Contribute -->
-              <input class= "icon" type="text" value="💱" id="ContributeInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="ContributeFunction()" onmouseout="ContributeoutFunc()">
-                  <span class="tooltiptext" id="ContributeTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="ContributeInput">Contribute</label>
-
-                <script>
-                function ContributeFunction() {
-                  var copyText = document.getElementById("ContributeInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("ContributeTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function ContributeoutFunc() {
-                  var tooltip = document.getElementById("ContributeTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div2"><!-- Ross -->
-              <input class= "icon" type="text" value="🙍‍♂️" id="RossInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="RossFunction()" onmouseout="RossoutFunc()">
-                  <span class="tooltiptext" id="RossTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="RossInput">Ross</label>
-
-                <script>
-                function RossFunction() {
-                  var copyText = document.getElementById("RossInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("RossTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function RossoutFunc() {
-                  var tooltip = document.getElementById("RossTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-            <div class="div3"><!-- Kyra -->
-              <input class= "icon" type="text" value="🙍‍♀️" id="KyraInput" style="text-align:center;" readonly>
-              <div class="tooltip">
-                <button onclick="KyraFunction()" onmouseout="KyraoutFunc()">
-                  <span class="tooltiptext" id="KyraTooltip">Copy to Clipboard</span>
-              <i class="far fa-copy"></i>
-                </button>
-              </div>
-              <label class= "label" for="KyraInput">Kyra</label>
-
-                <script>
-                function KyraFunction() {
-                  var copyText = document.getElementById("KyraInput");
-                  copyText.select();
-                  copyText.setSelectionRange(0, 99999);
-                  document.execCommand("copy");
-
-                  var tooltip = document.getElementById("KyraTooltip");
-                  tooltip.innerHTML = "Copied: " + copyText.value;
-                }
-
-                function KyraoutFunc() {
-                  var tooltip = document.getElementById("KyraTooltip");
-                  tooltip.innerHTML = "Copy to Clipboard";
-                }
-                </script>
-            </div>
-      </section>
-    </section>
-  </section>
-</body>
+	</body>
 </html>
