@@ -154,6 +154,12 @@ input, select, textarea {
 		letter-spacing: -0.025em;
 	}
 
+	h2.fil {
+		font-size: 1.75em;
+		letter-spacing: -0.025em;
+		margin: 0 0 0 0;
+	}
+
 	h3 {
 		font-size: 1.2em;
 		letter-spacing: -0.025em;
@@ -311,11 +317,11 @@ input, select, textarea {
 		.row > .col-4 {
 			width: 33.33333%;
 		}
-
+	
 		.row > .off-4 {
 			margin-left: 33.33333%;
 		}
-
+	
 		.row > .col-5 {
 			width: 41.66667%;
 		}
@@ -378,6 +384,16 @@ input, select, textarea {
 
 		.row > .off-12 {
 			margin-left: 100%;
+		}
+
+		.row > .col-13 {
+			width: 20%;
+			padding: 0 0 0 0;
+		}
+
+		.row > .off-13 {
+			margin-top: 0%;
+			margin-left: 25%;
 		}
 
 		.row.gtr-0 {
@@ -2720,7 +2736,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 3em 0 1em 0;
 	}
 
 		.wrapper.style1 {
@@ -2876,7 +2892,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			.wrapper {
-				padding: 3em 0 1em 0;
+				padding: 1em 0 1em 0;
 			}
 
 		/* CTA */
@@ -2938,7 +2954,7 @@ input, select, textarea {
 
 			header.major {
 				text-align: center;
-				margin: 0 0 2em 0;
+				margin: 0 0 1em 0;
 			}
 
 				header.major h2 {

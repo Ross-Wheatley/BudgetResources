@@ -46,4 +46,36 @@
     visibility: visible;
     opacity: 1;
   }
-  
+
+  /* Icons */
+  .icon.filter {
+    text-align: center;
+    cursor: default;
+    background-color: #37c0fb;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    color: #fff;
+    border-radius: 100%;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    line-height: 2em;
+    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+    margin: 0 0 .5em 0;
+}
+
+    .icon.filter:before {
+        font-size: 42px;
+    }  
+
+ /*  Text */
+    .p1 {
+        margin: 0 0 .5em 0;
+    }
+
+    .h3filter {
+        margin: 0 0 0 0;
+        font-size: 17px;
+    }

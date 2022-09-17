@@ -101,36 +101,140 @@
 			<!-- Highlights -->
 				<section class="wrapper style1">
 					<div class="container">
+                        <header class="major">
+							<h2 class="h2.fil">Bank Accounts</h2>
+						</header>
 						<div class="row gtr-200">
-							<section class="col-4 col-12-narrower">
+                         <!-- Ross Expenses -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="🌊" id="PersExpInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Ross Expenses</h3>
+                                  <div class="tooltip">
+                                    <button onclick="PersExpFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Ross Savings -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="💰" id="PersSaveInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Ross Savings</h3>
+                                  <div class="tooltip">
+                                    <button onclick="PersSaveFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                        <!-- Ross Lifesaver -->   
+                        <section class="col-13 col-12-narrower">
+                           <div class="box highlight">
+                               <input class="icon solid filter" type="text" value="🌌" id="PersLifeInput" style="text-align:center;" readonly>
+                               <h3 class="h3filter">Ross Lifesaver</h3>
+                                 <div class="tooltip">
+                                   <button onclick="PersLifeFunction()">
+                                 <i class="far fa-copy"></i>
+                                   </button>
+                                 </div>
+                           </div>
+                       </section>
+
+                         <!-- Joint Bills -->   
+							<section class="col-13 col-12-narrower">
 								<div class="box highlight">
-									<input type="text" value="💾" id="SubscriptionsInput" style="text-align:center;" readonly>
-									<h3>Household YNAB Budget</h3>
-									<p>This is the household focused budget within YNAB. This is where expense tracking occurs as well as primary reporting.</p>
+									<input class="icon solid filter" type="text" value="🏡" id="JointBillsInput" style="text-align:center;" readonly>
+									<h3 class="h3filter">Joint Bills</h3>
                                       <div class="tooltip">
-                                        <button onclick="SubscriptionsFunction()" onmouseout="SubscriptionsoutFunc()">
-                                          <span class="tooltiptext" id="SubscriptionsTooltip">Copy to Clipboard</span>
+                                        <button onclick="JointBillsFunction()">
                                       <i class="far fa-copy"></i>
                                         </button>
                                       </div>
 								</div>
 							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-calculator"></i>
-									<h3>Household Budget</h3>
-									<p>This Google Sheet is made by me, it forms the backbone for all budgeting. This is the source information for the other sheets.</p>
-									<a href="https://docs.google.com/spreadsheets/d/1C5yTGVvdCSn9Hnpcb_9gk71Tm4waRV38QooXkXLGlp8/edit?usp=sharing" class="button"target="_blank" rel="noopener noreferrer">Go to Sheet</a>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-chart-pie"></i>
-									<h3>Net Worth Tracking</h3>
-									<p>This is a Google Sheet developed by CompiledSanity. Used to track Net Worth areas in greater detail.</p>
-									<a href="https://docs.google.com/spreadsheets/d/1zWmPhwMdC503QbrzBPPDHSi7-0YsXpwDAMVoIMjcQHA/edit#gid=1133598012" class="button"target="_blank" rel="noopener noreferrer">Go to Sheet</a>
-								</div>
-							</section>
+
+                         <!-- Joint Spending -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="🛒" id="JointSpendInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Joint Spending</h3>
+                                  <div class="tooltip">
+                                    <button onclick="JointSpendFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Joint Subscriptions -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="💾" id="JointSubInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Joint Subscriptions</h3>
+                                  <div class="tooltip">
+                                    <button onclick="JointSubFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Joint Savings -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="👪" id="JointSaveInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Joint Savings</h3>
+                                  <div class="tooltip">
+                                    <button onclick="JointSaveFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Joint Emergency Fund -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="🚨" id="JointEmergInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Joint Emergency</h3>
+                                  <div class="tooltip">
+                                    <button onclick="JointEmergFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Coop Spending -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="👶" id="CoopSpendInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Coop Spending</h3>
+                                  <div class="tooltip">
+                                    <button onclick="CoopSpendFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
+                         <!-- Coop Lifesaver -->   
+                         <section class="col-13 col-12-narrower">
+                            <div class="box highlight">
+                                <input class="icon solid filter" type="text" value="💸" id="CoopLifeInput" style="text-align:center;" readonly>
+                                <h3 class="h3filter">Coop Lifesaver</h3>
+                                  <div class="tooltip">
+                                    <button onclick="CoopLifeFunction()">
+                                  <i class="far fa-copy"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </section>
+
 						</div>
 					</div>
 				</section>
