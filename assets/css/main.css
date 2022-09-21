@@ -2175,7 +2175,7 @@ input, select, textarea {
 			height: 5em;
 			line-height: 5em;
 			box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
-			margin: 0 0 2em 0;
+			margin: .5em 0 2em 0;
 		}
 
 			.icon.major:before {
@@ -3374,84 +3374,3 @@ input, select, textarea {
 			}
 
 	}
-	.tooltip { /*? Copy To Clipboard Tooltip */
-		position: relative;
-		left: 1px;
-		display: inline-block;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		margin-right: 0px;
-		margin-left: 0px;
-	  }
-	  
-	  .tooltip .tooltiptext { /*? Copy To Clipboard Tooltip */
-		visibility: hidden;
-		width: 120px;
-		background-color: #555;
-		color: #fff;
-		font-family: Arial;
-		font-size: 13px;
-		font-weight: normal;
-		text-align: center;
-		border-radius: 6px;
-		padding-top: 3px;
-		padding-right: 0px;
-		padding-bottom: 3px;
-		padding-left: 0px;
-		position: absolute;
-		z-index: 1;
-		bottom: 125%;
-		left: 50%;
-		margin-left: -60px;
-		opacity: 0;
-		transition: opacity 0.3s;
-	  }
-	  
-	  .tooltip .tooltiptext::after { /*? Copy To Clipboard Tooltip */
-		content: "";
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		margin-left: -5px;
-		border-width: 5px;
-		border-style: solid;
-		border-color: #555 transparent transparent transparent;
-	  }
-	  
-	  .tooltip:hover .tooltiptext { /*? Copy To Clipboard Tooltip */
-		visibility: visible;
-		opacity: 1;
-	  }
-	
-	  /* Icons */
-	  .icon.filter {
-		text-align: center;
-		cursor: default;
-		background-color: #37c0fb;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		color: #fff;
-		border-radius: 100%;
-		display: inline-block;
-		width: 3em;
-		height: 3em;
-		line-height: 2em;
-		box-shadow: 0 0 0 6px white, 0 0 0 8px #e0e0e0;
-		margin: 0 0 1em 0;
-	}
-	
-		.icon.filter:before {
-			font-size: 42px;
-		}  
-	
-	 /*  Text */
-		.p1 {
-			margin: 0 0 .5em 0;
-		}
-	
-		.h3filter {
-			margin: 0 0 0 0;
-			font-size: 20px;
-		}
