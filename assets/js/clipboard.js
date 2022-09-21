@@ -79,3 +79,72 @@
         copyText.setSelectionRange(0, 99999);
         document.execCommand("copy");
     }
+
+
+// Frequencies 
+
+    // Weekly 🔱
+    function WeeklyFunction() {
+        var copyText = document.getElementById("WeeklyInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+    // Monthly Main 💠
+    function MonthMainFunction() {
+        var copyText = document.getElementById("MonthMainInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+     // Monthly Secondary ➰
+     function MonthSecFunction() {
+        var copyText = document.getElementById("MonthSecInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+    
+//Indicators
+
+    // Sinking Funds ⚓
+    function SinkingsFunction() {
+        var copyText = document.getElementById("SinkingInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+    // Must Be Funded 💥
+    function MustFundFunction() {
+        var copyText = document.getElementById("MustFundInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+     // Contribute 💱
+     function ContributeFunction() {
+        var copyText = document.getElementById("ContributeInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+    // Ross Owns 🙍‍♂️
+    function RossOwnFunction() {
+        var copyText = document.getElementById("RossOwnInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }
+
+     // Kyra Owns 🙍‍♀️
+     function KyraOwnFunction() {
+        var copyText = document.getElementById("KyraOwnInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    }

@@ -531,7 +531,7 @@ caption { /*? Table Captions */
   position: relative;
   left: 1px;
   display: inline-block;
-  margin-top: 0px;
+  margin-top: 10em;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;

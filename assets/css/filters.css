@@ -62,8 +62,8 @@
     width: 3em;
     height: 3em;
     line-height: 2em;
-    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
-    margin: 0 0 .5em 0;
+    box-shadow: 0 0 0 6px white, 0 0 0 8px #e0e0e0;
+    margin: 0 0 1em 0;
 }
 
     .icon.filter:before {

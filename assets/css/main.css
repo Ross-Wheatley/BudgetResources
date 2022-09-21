@@ -730,7 +730,7 @@ input, select, textarea {
 				}
 
 					.row.gtr-200 > * {
-						padding: 50px 0 0 40px;
+						padding: 20px 0 0 20px;
 					}
 
 					.row.gtr-200.gtr-uniform {
@@ -1988,7 +1988,7 @@ input, select, textarea {
 	}
 
 		header.major h2 {
-			font-size: 2.25em;
+			font-size: 2em;
 		}
 
 		header.major p {
@@ -2547,7 +2547,7 @@ input, select, textarea {
 
 	#header {
 		text-align: center;
-		padding: 3em 0 0 0;
+		padding: 1em 0 0 0;
 		background-color: #fff;
 		background-image: url("images/bg02.png"), url("images/bg02.png"), url("images/bg01.png");
 		background-position: top left,					top left,					top left;
@@ -2556,12 +2556,12 @@ input, select, textarea {
 	}
 
 		#header h1 {
-			padding: 0 0 2.75em 0;
+			padding: .5em 0 1.5em 0;
 			margin: 0;
 		}
 
 			#header h1 a {
-				font-size: 1.5em;
+				font-size: 2.5em;
 				letter-spacing: -0.025em;
 				border: 0;
 			}
@@ -2736,7 +2736,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 0.5em 0 2em 0;
+		padding: 0.5em 0 1em 0;
 	}
 
 		.wrapper.style1 {
@@ -2773,7 +2773,7 @@ input, select, textarea {
 
 	#cta {
 		text-align: center;
-		padding: 3.5em 0;
+		padding: 1em 0;
 	}
 
 		#cta header h2 {
@@ -2954,7 +2954,7 @@ input, select, textarea {
 
 			header.major {
 				text-align: center;
-				margin: 0 0 1em 0;
+				margin: 0 0 .5em 0;
 			}
 
 				header.major h2 {
