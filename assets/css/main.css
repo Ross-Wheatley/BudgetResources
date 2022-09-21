@@ -2175,7 +2175,7 @@ input, select, textarea {
 			height: 5em;
 			line-height: 5em;
 			box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
-			margin: .5em 0 2em 0;
+			margin: 1em 0 2em 0;
 		}
 
 			.icon.major:before {
