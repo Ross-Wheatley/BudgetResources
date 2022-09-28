@@ -730,7 +730,7 @@ input, select, textarea {
 				}
 
 					.row.gtr-200 > * {
-						padding: 20px 0 0 20px;
+						padding: 80px 0 0 80px;
 					}
 
 					.row.gtr-200.gtr-uniform {
@@ -1984,11 +1984,11 @@ input, select, textarea {
 
 	header.major {
 		text-align: center;
-		margin: 0 0 0 0;
+		margin: 0 0 2em 0;
 	}
 
 		header.major h2 {
-			font-size: 2em;
+			font-size: 2.25em;
 		}
 
 		header.major p {
